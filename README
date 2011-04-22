@@ -1,0 +1,35 @@
+
+Praxiseinheit für die Vorlesung Datenstrukturen
+
+
+Praxiseinheit 1 (Felder, Zeiger, Freispeicherverwaltung)
+
+Sie möchten eine Liste Ihrer Freunde erstellen. Jeder Freund hat eine eindeutige Nummer
+(beliebig im Bereich von 1 bis 100000), einen Namen und verschiedene Hobbys (max. 10).
+
+1. Entwerfen Sie eine Datenstruktur, um die Daten eines Freundes verwalten zu können!
+
+2. Die Freundesliste soll in einem Feld mit maximal 500 Elementen verwaltet werden.
+Schreiben Sie eine Funktion, um die Daten eines Freundes zu erfassen und diese sortiert
+nach dessen Nummer ins Verwaltungsfeld aufzunehmen!
+
+3. Schreiben Sie eine Funktion, um nach einem Freund über dessen Nummer zu suchen!
+Geht das schneller als in O(n) (wobei n die Zahl der Einträge in der Freundesliste ist)?
+
+4. Schreiben Sie eine Funktion, um einen Freund zu löschen! Löschkriterium ist hierbei die
+Nummer des Freundes. Im Feld sollen nach dem Löschen keine „Lücken“ entstehen, d.h.
+Nullzeiger zwischen belegten Feldelementen sind nicht erlaubt. Vergessen Sie auch nicht,
+dynamisch angeforderten Speicherplatz wieder freizugeben!
+
+5. Schreiben Sie ein Verwaltungsprogramm, mit dem die gesamte Funktionalität getestet
+werden kann! Kontrollieren Sie die korrekte Speicherverwaltung mit einem Debugger!
+
+
+Hinweise
+• Kennzeichnen Sie die Nichtexistenz eines Hobbys bzw. Freundes in einem Feld mit Hilfe
+   des Nullzeigers!
+• Zeichenketten dürfen nur so viel Speicherplatz belegen, wie nötig ist, um alle Zeichen
+     aufzunehmen!
+• Für Ein- bzw. Ausgabe und Zeichenkettenoperationen dürfen Sie Bibliotheksfunktionalität
+      verwenden!
+
