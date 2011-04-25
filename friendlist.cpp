@@ -7,6 +7,13 @@
 fellow* fw_get()
 {
 	fellow* pF = new fellow;
+	char c;
+
+	printf("Give a number for the friend: ");
+	scanf("%lu", &(pF->uiNumber));
+
+	/* flush the buffer */
+	while ((c = getchar()) != '\n' && c != EOF);
 
 	printf("Give a name of the friend: ");
 	pF->pName = readline_dyn(LINEBUFFER);
@@ -16,7 +23,7 @@ fellow* fw_get()
 	int i;
 	for (i = 0; i < NUMHOB; i++)
 	{
-		printf("Give Hobby %2i:", i);
+		printf("Give Hobby %2i: ", i);
 		r = readline_dyn(LINEBUFFER);
 		if (r == NULL)
 			break;
