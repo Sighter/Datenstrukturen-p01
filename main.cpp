@@ -3,12 +3,13 @@
 
 
 #include <stdio.h>
-#include "friendlist.h"
+#include "interface.h"
 
 
 int main()
 {
 	int i;
+	bool r;
 
 	/* create a friendarray and init it*/
 	fellow* aFriends[MAXFRIENDS];
@@ -16,14 +17,8 @@ int main()
 	for (i = 0; i < MAXFRIENDS; i++)
 		aFriends[i] = NULL;
 
-
-	fellow* pF;
-	
-	pF = fw_get();
-
-	fw_print(pF);
+	r = iface_mainLoop(aFriends, MAXFRIENDS);
 
 
-	fw_delete(pF);
 }
 
