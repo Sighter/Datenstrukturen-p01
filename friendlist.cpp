@@ -1,5 +1,4 @@
 
-#include "readline_dyn.h"
 #include "friendlist.h"
 
 

@@ -1,9 +1,11 @@
 
 #define LINEBUFFER 255
 #define NUMHOB 10
+#define MAXNUMBERS 100000
 
 #include <stdlib.h>
 #include <stdio.h>
+#include "readline_dyn.h"
 
 /* struct for managing a friend */
 struct fellow
