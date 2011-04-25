@@ -28,7 +28,7 @@ CFLAGS=-c -g -xc++ \
 		-Wuninitialized \
 		-Weffc++
 
-TARGETS= main.o friendlist.o readline_dyn.o
+TARGETS= main.o friendlist.o interface.o readline_dyn.o
 		
 
 all: main
