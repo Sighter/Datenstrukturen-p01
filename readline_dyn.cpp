@@ -27,6 +27,10 @@ char* readline_dyn(int buffsize)
 		i++;
 	}
 
+	/* flush the input buffer */
+	if ((i >= buffsize) && (c != EOF && c != '\n'))
+		while ((c = getchar()) != '\n' && c != EOF);
+
 	if (i == 1)
 	{
 		delete[] temp;
