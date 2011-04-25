@@ -29,14 +29,21 @@ struct fellow
 /* read a fellow from the command line */
 fellow* fw_get();
 
-/* sorted insert a friend in the given list */
-bool fw_insert_sorted(fellow* pF, fellow* aList);
-
-/* search a friend in list with number */
-fellow* fw_search(unsigned long int uiNum, fellow* aList);
-
 /* print a fellow */
 void fw_print(fellow* pF);
 	
 /* delete a fellow, if it was dynamicly allocated */
 bool fw_delete(fellow* pF);
+
+/* count friends */
+int fli_count(fellow** aFriends, const int ciLen);
+
+/* sorted insert a friend in the given list */
+bool fli_insert_sorted(fellow** aFriends, const int ciLen);
+
+/* search a friend in list with number */
+fellow* fli_search(unsigned long int uiNum, fellow* aList, const int ciLen);
+
+/* print friendlist */
+void fli_print(fellow** aFriends, const int ciLen);
+

@@ -70,3 +70,103 @@ bool fw_delete(fellow* pF)
 
 	return true;
 }
+
+
+/* print friendlist */
+void fli_print(fellow** aFriends, const int ciLen)
+{
+	int i = 0, k = 0;
+	printf("Your Friendlist is able to save %d fellows:\n", ciLen);
+	for (i = 0; i < ciLen; i++)
+	{
+		if (aFriends[i] != NULL)
+		{
+			fw_print(aFriends[i]);
+			k++;
+		}
+	}
+	printf("You have %d friends\n\n", k);
+}
+
+
+/* count friendlist */
+int fli_count(fellow** aFriends, const int ciLen)
+{
+	int i = 0;
+	int c = 0;
+	for (i = 0; i < ciLen; i++)
+		if (aFriends[i] != NULL)
+			c++;
+	return c;
+}
+
+
+
+/* sorted insert a friend in the given list */
+bool fli_insert_sorted(fellow** aFriends, const int ciLen)
+{
+	int c = 0;
+	int i = 0;
+	int k = 0;
+
+	fellow* pF = NULL;
+
+	/* check wether there is place in the list */
+	c = fli_count(aFriends, ciLen);
+	
+	if (c >= ciLen)
+	{
+		printf("Friendlist is full.\n");
+		return false;
+	}
+
+	/* get a fellow */
+	pF = fw_get();
+	
+	/* check if number is valid */
+	if (pF->uiNumber <= 0 || pF->uiNumber > MAXNUMBERS)
+	{
+		printf("Friend Number is out of range\n");
+		fw_delete(pF);
+		return false;
+	}
+	
+	/* insert */
+	for (i = 0; i < ciLen; i++)
+	{
+		if (aFriends[i] == NULL)
+		{
+			aFriends[i] = pF;
+			return true;
+		}
+		else if (aFriends[i]->uiNumber == pF->uiNumber)
+		{
+			printf("Number already in list.\n");
+			fw_delete(pF);
+			return false;
+		}
+		else if (aFriends[i]->uiNumber > pF->uiNumber)
+		{
+			/* shift all entries up */
+			k = i;
+			for(k = ciLen - 2; k >= i; k --)
+			{
+				aFriends[k+1] = aFriends[k];
+			}
+			
+			aFriends[i] = pF;
+			return true;
+		}
+	}
+}
+
+
+/* search a friend in list with number */
+fellow* fli_search(unsigned long int uiNum, fellow* aList, const int ciLen)
+{
+	int i = 0;
+	for (i = 0; i < ciLen; i++)
+		if (aList[i] != NULL && aList[i]->uiNumber == uiNum)
+			return aList[i];
+}
+
