@@ -164,7 +164,7 @@ bool fli_insert_sorted(fellow** aFriends, const int ciLen)
 
 
 /* search a friend in list with number */
-fellow* fli_search(unsigned long int uiNum, fellow* aList, const int ciLen)
+fellow* fli_search(unsigned long int uiNum, fellow** aList, const int ciLen)
 {
 	int i = 0;
 	for (i = 0; i < ciLen; i++)

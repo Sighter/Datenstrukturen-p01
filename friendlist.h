@@ -42,7 +42,7 @@ int fli_count(fellow** aFriends, const int ciLen);
 bool fli_insert_sorted(fellow** aFriends, const int ciLen);
 
 /* search a friend in list with number */
-fellow* fli_search(unsigned long int uiNum, fellow* aList, const int ciLen);
+fellow* fli_search(unsigned long int uiNum, fellow** aList, const int ciLen);
 
 /* print friendlist */
 void fli_print(fellow** aFriends, const int ciLen);
