@@ -48,6 +48,44 @@ bool iface_mainLoop(fellow** aFriends, const int ciLen)
 		else if (key[0] == 'a')
 			fli_insert_sorted(aFriends, ciLen);
 
+		else if (key[0] == 's')
+		{
+			fellow* pTempFriend = NULL;
+			unsigned long int uiNumber = 0;
+			char ch = 'a';
+
+			printf("Give a number to look for a friend: ");
+			scanf("%lu", &(uiNumber));
+
+			/* flush the buffer */
+			while ((ch = getchar()) != '\n' && ch != EOF);
+
+			pTempFriend = fli_search(uiNumber, aFriends, ciLen);
+			
+			if (pTempFriend != NULL)
+				fw_print(pTempFriend);
+			else
+				printf("You do not have a friend with this number.\n");
+		}
+
+		else if (key[0] == 'd')
+		{
+			unsigned long int uiNumber = 0;
+			char ch = 'a';
+			bool r = false;
+
+			printf("Give a number to delete a friend: ");
+			scanf("%lu", &(uiNumber));
+
+			/* flush the buffer */
+			while ((ch = getchar()) != '\n' && ch != EOF);
+			
+			r = fli_delete(uiNumber, aFriends, ciLen);
+
+			if (r == false)
+				printf("Friend could not be deleted\n");
+		}
+
 		else if (key[0] == 'q')
 		{
 			delete[] key;
