@@ -16,13 +16,12 @@ fellow* fw_get()
 
 	printf("Give a name of the friend: ");
 	pF->pName = readline_dyn(LINEBUFFER);
-	printf("\n");
 	
 	char* r = NULL;
 	int i;
 	for (i = 0; i < NUMHOB; i++)
 	{
-		printf("Give Hobby %2i: ", i);
+		printf("Give Hobby %2i: ", i + 1);
 		r = readline_dyn(LINEBUFFER);
 		if (r == NULL)
 			break;
@@ -51,6 +50,8 @@ void fw_print(fellow* pF)
 	for (i = 0; i < NUMHOB; i++)
 		if (pF->aHobbys[i] != NULL)
 			printf("  %s\n", pF->aHobbys[i]);
+
+	printf("\n");
 }	
 
 
@@ -72,11 +73,12 @@ bool fw_delete(fellow* pF)
 }
 
 
+
 /* print friendlist */
 void fli_print(fellow** aFriends, const int ciLen)
 {
 	int i = 0, k = 0;
-	printf("Your Friendlist is able to save %d fellows:\n", ciLen);
+	printf("Your Friendlist is able to save %d fellows:\n\n", ciLen);
 	for (i = 0; i < ciLen; i++)
 	{
 		if (aFriends[i] != NULL)
