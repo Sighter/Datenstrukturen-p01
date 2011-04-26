@@ -47,3 +47,6 @@ fellow* fli_search(unsigned long int uiNum, fellow** aList, const int ciLen);
 /* print friendlist */
 void fli_print(fellow** aFriends, const int ciLen);
 
+/* delete a friend in list with number */
+bool fli_delete(unsigned long int uiNum, fellow** aList, const int ciLen);
+

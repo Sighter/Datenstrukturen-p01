@@ -170,5 +170,37 @@ fellow* fli_search(unsigned long int uiNum, fellow** aList, const int ciLen)
 	for (i = 0; i < ciLen; i++)
 		if (aList[i] != NULL && aList[i]->uiNumber == uiNum)
 			return aList[i];
+
+	return NULL;
+}
+
+
+/* delete a friend in list with number */
+bool fli_delete(unsigned long int uiNum, fellow** aList, const int ciLen)
+{
+	int i = 0;
+	int k = 0;
+
+	/* check if number is valid */
+	if (uiNum <= 0 || uiNum > MAXNUMBERS)
+		return false;
+	else
+	{
+		/* search, delete and shift */
+		for (i = 0; i < ciLen; i++)
+		{
+			if (aList[i] != NULL && aList[i]->uiNumber == uiNum)
+			{
+				fw_delete(aList[i]);
+				/* shift all down */
+				for (k = i; k < ciLen - 1; k++)
+				{
+					aList[k] = aList[k+1];
+				}
+				return true;
+			}
+		}
+	}
+	return false;
 }
 
