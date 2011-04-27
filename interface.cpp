@@ -1,6 +1,12 @@
 
 #include "interface.h"
 
+/* Exercise 5
+ * **********
+ * In this file you find all functions for realizing the INTERACTIVE
+ * user interface. The functions are self-explanatory. */
+
+
 /* print opener */
 void iface_printOpener()
 {

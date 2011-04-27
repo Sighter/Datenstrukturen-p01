@@ -4,6 +4,10 @@
 #include "readline_dyn.h"
 
 
+/* Hint: Zeichenketten dürfen nur so viel Speicherplatz belegen, wie nötig ist, um alle Zeichen aufzunehmen!
+ * The function readline_dyn takes about this by reading data in a great buffer, after that it dynamicly allocates
+ * only the memory it needs for the string. Length + 1, because the \0 character has to be added at the end. */
+
 /* read a line, you have to give a linebuffersize
  * @ buffersize
  * < pointer to an allocated char array or null if nothing was read */

@@ -103,8 +103,13 @@ int fli_count(fellow** aFriends, const int ciLen)
 }
 
 
-
-/* sorted insert a friend in the given list */
+/* Exercise 2
+ * **********
+ * sorted insert a friend in the given list, the function creates a new fellow
+ * instance and uses the function fw_get to get a fellow (friend) from the
+ * command line. So it have to shift all items, if it inserts an element before
+ * an other one. I would feel better if the reading process is done by an interface
+ * function */
 bool fli_insert_sorted(fellow** aFriends, const int ciLen)
 {
 	int c = 0;
@@ -174,8 +179,12 @@ fellow* fli_search(unsigned long int uiNum, fellow** aList, const int ciLen)
 	return NULL;
 }
 
-
-/* delete a friend in list with number */
+/* Exercise 4
+ * **********
+ * Delete a friend in by means of the given number. This function also has to shift all
+ * other items in the list. To free memory it calls the fw_delete function, wich takes
+ * care about deletion of the fellow instance and all dynamicly allocated strings in there.
+ * See fw_delete for details. */
 bool fli_delete(unsigned long int uiNum, fellow** aList, const int ciLen)
 {
 	int i = 0;

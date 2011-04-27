@@ -7,7 +7,10 @@
 #include <stdio.h>
 #include "readline_dyn.h"
 
-/* struct for managing a friend */
+
+/* Exercise 1
+ * ********** 
+ * struct for managing a friend */
 struct fellow
 {
 	unsigned long int uiNumber;
