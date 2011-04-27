@@ -20,7 +20,7 @@ void iface_printOpener()
 void iface_printHelp()
 {
 	printf("Following commands are available:\n");
-	printf("  a : add a friend\n");
+	printf("  a : add a friend (simply hit enter if do not want to add more hobbys)\n");
 	printf("  d : delete a friend\n");
 	printf("  s : search a friend (print it)\n");
 	printf("  p : print friend list\n");
