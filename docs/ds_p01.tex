@@ -1,0 +1,46 @@
+
+% documentation for for first practice of cg1
+
+\documentclass{article}
+\usepackage{times}
+\usepackage{german}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+
+\title{Datenstrukturen\\Praxiseinheit 1}
+\author
+{
+	Sascha Ebert\\
+	MatNr: 177182\\
+	\texttt{sascha.ebert@s2006.tu-chemnitz.de}\\
+	\texttt{https://github.com/Sighter/Datenstrukturen-p01}\\
+}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Anbei finden sie die Lösungen zu den nicht programmierbaren Aufgaben der 1. Praxiseinheit.
+Alle anderen Programmcode-bezogenen Aufgaben finden sie im Quelltext an den jeweiligen Positionen
+erläutert. Es somit auch möglich das oben vermerkte Git-Repository zu nutzen um den Quelltext
+zu betrachten.
+\end{abstract}
+
+\section*{Aufgabe 3}
+\paragraph{Frage:}
+Schreiben Sie eine Funktion, um nach einem Freund über dessen Nummer zu suchen!
+Geht das schneller als in O(n) (wobei n die Zahl der Einträge in der Freundesliste ist)?
+
+\paragraph{Antwort:}
+Es ist möglich die Suche schneller als in \(O(n)\) zu schreiben, da das zugrunde liegende Array
+geordnet ist. Als Beispiel wäre die binäre suche zu nennen, welche maximal \(\log_{2}(n)\) Schritte
+benötigt.
+
+Eine weitere Möglichkeit wäre die Nummern der Freunde als Feldindizes zu benutzen. Dabei wäre der Zugriff
+mit konstanter Komplexität möglich. Dies ist aber durch die Freiwählbarkeit der Nummern durch den Nutzer
+nahezu ausgeschlossen.
+\end{document}
+
+
