@@ -1,6 +1,12 @@
 
 Praxiseinheit für die Vorlesung Datenstrukturen
 
+Benutzung:
+
+ - Compilieren sie das Programm mit dem Befehl "make" oder mit ihrer Entwicklungsumgebung
+
+ - Rufen sie das Programm auf, und drücken danach "h<enter>", um die Hilfe anzuschauen
+
 
 Praxiseinheit 1 (Felder, Zeiger, Freispeicherverwaltung)
 
